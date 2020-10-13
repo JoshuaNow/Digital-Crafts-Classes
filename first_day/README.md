@@ -1,6 +1,6 @@
 # Markdown
 
-## This is app is about how I will use Markdown
+## This app is about how I will use Markdown
 
 
 
