@@ -1,15 +1,10 @@
-name = input("What is your pets name?")
+name = input("What is your pets name?\n")
 num = len(name)
-if name == ("Shadow"):
-    print("El Gato Diablo")
-if name == ("Daisy"):
-        print("Good daggo!")
-if num < 3:
-        print("Sorry that name is too short")
-
+if len(name) == ("shadow"):
+    print("El Gato Diablo!")
+if len(name) == ("Daisy"):
+    print("Good dog")
+if len(name) > 3:
+        print(f"{name} is not long enough")
 else:
-        print("That is a nice name!")
-
-
-
-        # why is it printing the everything 
+  print("That is a sweet name!")

@@ -1,5 +1,5 @@
 try:
     if 2 > "3":
         print("never prints")
-except:
+except: 
     print("No crashing")
