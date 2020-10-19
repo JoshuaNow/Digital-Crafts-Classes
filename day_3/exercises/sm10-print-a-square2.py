@@ -1,3 +1,4 @@
-i = 10
-stars = ("*"*i)= + "\n"
-print(stars*i)
+i = int(input("How big is the square?"))
+ 
+ print("*" * i * i)
+ i+=1
