@@ -37,18 +37,19 @@
 #     i-=1 
 
 
-user_name = ""
-password = ""
-attempts = 0
-while user_name != "josh" and password != "jupiter":
-    user_name = input("Please enter your username\n")
-    password = input("Please enter your password \n")
-    attempts += 1
-    if attempts == 3:
-        print("You have tried to many times try again in a few minutes.")
-        break
+# user_name = ""
+# password = ""
+# attempts = 0
+# while user_name != "josh" and password != "jupiter":
+#     user_name = input("Please enter your username\n")
+#     password = input("Please enter your password \n")
+#     attempts += 1
+#     if attempts == 3:
+#         print("You have tried to many times try again in a few minutes.")
+#         break
     
 
+#loops for  cs dojo youtube tutorial 5.
 
 
 
