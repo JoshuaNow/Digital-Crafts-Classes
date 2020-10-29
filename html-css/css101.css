@@ -1,0 +1,28 @@
+/* this is  */
+h1 {
+  font-size: large;
+  background-color: aqua;
+}
+
+/* this is a class selector */
+.comment {
+  color: #2df;
+  background: #efefef;
+}
+
+/* don't do this you should really do it with  id */
+#main-content {
+  color: red;
+}
+
+h1:hover {
+  background-color: #2df;
+}
+
+div {
+  background-color: #2df;
+}
+
+.class {
+  background-color: black;
+}

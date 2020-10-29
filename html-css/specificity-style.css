@@ -1,0 +1,13 @@
+.active {
+  border: 1px solid red;
+}
+.completed {
+  text-decoration: line-through;
+}
+
+body {
+  font-size: larger;
+}
+html {
+  font-family: Arial;
+}
