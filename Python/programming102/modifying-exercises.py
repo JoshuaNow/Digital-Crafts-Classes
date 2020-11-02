@@ -15,7 +15,7 @@ counter = 0
 while len(dogs) >= counter:
     del dogs[0]
     counter+=1
-
+    print(dogs)
 
 
 
