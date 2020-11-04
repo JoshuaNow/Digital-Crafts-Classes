@@ -12,6 +12,6 @@ while tip_amount == 0:
     elif service_level == "bad":
         tip_amount = float(total_amount * .10)
     print(tip_amount)
-print(f"tip amount is {tip_amount}")
+print(f"tip amount is ${tip_amount}")
 final_total = tip_amount + total_amount
 print(f"Your total bill is {final_total}")
