@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .title {
+      }
+    </style>
+  </head>
+
+  <body>
+    <button type="button">Click Me!</button>
+    <ul>
+      <li>
+        <div class="title">Title 1</div>
+        <div class="additional">...lots of text</div>
+      </li>
+      <li>
+        <div class="title">Title 1</div>
+        <div class="additional">...lots of text</div>
+      </li>
+      <li>
+        <div class="title">Title 1</div>
+        <div class="additional">...lots of text</div>
+      </li>
+    </ul>
+    <script>
+      let clickFun = function (evt) {
+        evt.target.nextElementSibling.classList.toggle("hidden");
+      };
+      let titles = document.querySelectorAll(".title");
+      titles.forEach(function (title) {
+        title.onclick = clickFun;
+        title.nextElementSibling.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
