@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+//
 
 //sometimes you will see it look like this
 const app = require("express")();
@@ -8,9 +9,13 @@ const app = require("express")();
       const express = require("express")
       const app = require("app")
   */
+const send404 = (req, res) => {
+  res.status(404);
+  res.send(_404Content);
+};
 
 const sendFavicon = (req, res) => {
-  fs.readFile("./favicon-32x32.png", (err, data) => {
+  fs.readFile("favicon-32x32.png", (err, data) => {
     if (err) return res.send(err);
     res.send(data);
   });
@@ -29,23 +34,30 @@ const _404Content = `
       </body>
   </html>
   `;
-const send404 = (req, res) => {
-  res.status(404);
-  res.send(_404Content);
-};
+
+const serveContent = (title, content) => `
+    <!DOCTYPE html>
+    <html> 
+        <head> 
+            <title>${title}</title>
+        </head>
+        <body>
+            <h1>${title}</h1>
+            <div>${content}</div>
+        </body>
+    </html>
+`;
 
 const serveHome = (req, res) => {
-  res.send("<h1>You are Home</h1>");
+  res.send(serveContent("Home"));
 };
-
-//favicon route
 app.get("/favicon.ico", sendFavicon);
-
-//home route
 app.get("/", serveHome);
 app.get("/home", serveHome);
-
-//404 route
+app.get("/about", (req, res) =>
+  res.send(serveContent("About", "Lets give them something to talk about.")),
+);
+app.get("/contact", (req, res) => res.send(serveContent("Contact")));
 app.get("*", send404);
 
 const server = http.createServer(app);
