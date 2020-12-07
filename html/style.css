@@ -1,0 +1,23 @@
+h1 {
+  color: aquamarine;
+  font-size: large;
+  font-style: oblique;
+}
+
+.main-content {
+  color: darkgreen;
+  font-size: medium;
+  font-variant: normal;
+}
+
+a:hover {
+  color: black;
+}
+
+.yahoo-link {
+  margin-left: 50px;
+}
+
+.yahoo-link {
+  margin-left: 25px;
+}

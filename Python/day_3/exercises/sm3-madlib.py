@@ -1,0 +1,5 @@
+print("Please fill in the blanks below")
+print("'Your name goes here''s favorite subject in school is 'subject is here' ")
+name = input("what is the name?")
+subject = input ('what is the subject?')
+print(f"{name}'s facorite subject in school is {subject}'")

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="login">
+      <input name="username" />
+      <input name="password" type="password" />
+      <input name="agree" checked type="checkbox" />Agree to terms?
+      <button>Login</button>
+    </form>
+    <script>
+      let loginForm = document.querySelector("#login");
+      loginForm.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+        let results = [...evt.target.elements]
+          //   .filter((el) => el.name)
+          .map((el) => ({ name: el.name, value: el.value }));
+        let d = document.createElement("div");
+        console.log(results);
+        for (let i = 0; i < results.length; i++) {
+          d.append(results[i].name, ":", results[i].value);
+          document.body.append(d);
+        }
+      });
+
+      let newElement = document.createElement("input");
+      newElement.setAttribute("name", "email");
+      newElement.setAttribute("placeholder", "Email");
+      //   document.querySelector("#login").append(newElement); //how to append newly created JS elements
+      loginForm.append(newElement); // we can do this because we set a variable for the whole quary selecetor
+
+      let dateTime = document.createElement("input");
+      dateTime.setAttribute("type", "date");
+      loginForm.append(dateTime);
+    </script>
+  </body>
+</html>
